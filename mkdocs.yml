@@ -24,5 +24,4 @@ extra:
 # pages:
 #   - AliveGameStudio: AliveGameStudio/index.md
 #   - 原石计划: TetraProject/index.md
-# extra:
-  disqus: 'alivegamestudio'
+  # disqus: 'alivegamestudio'
