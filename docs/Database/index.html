@@ -210,22 +210,89 @@
       
         <li class="md-nav__item">
   <a href="#character" class="md-nav__link">
-    Character表头
+    Character表
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#characterfieldcode" class="md-nav__link">
     Character/fieldCode
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#charactertagcode" class="md-nav__link">
     Character/tagCode
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    Card表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cardtagcode" class="md-nav__link">
+    Card/tagCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardperferredtargettypecode" class="md-nav__link">
+    Card/perferredTargetTypeCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardeffectcode" class="md-nav__link">
+    Card/effectCode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardcommand" class="md-nav__link">
+    CardCommand表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cardcommandremapcode" class="md-nav__link">
+    CardCommand/remapCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardcommandsearchcards" class="md-nav__link">
+    CardCommand/SearchCards指令
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -246,8 +313,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../CardCommand/" title="卡牌指令-CardCommand" class="md-nav__link">
-      卡牌指令-CardCommand
+    <a href="../Hotkey/" title="快捷键" class="md-nav__link">
+      快捷键
     </a>
   </li>
 
@@ -286,22 +353,89 @@
       
         <li class="md-nav__item">
   <a href="#character" class="md-nav__link">
-    Character表头
+    Character表
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#characterfieldcode" class="md-nav__link">
     Character/fieldCode
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#charactertagcode" class="md-nav__link">
     Character/tagCode
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#card" class="md-nav__link">
+    Card表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cardtagcode" class="md-nav__link">
+    Card/tagCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardperferredtargettypecode" class="md-nav__link">
+    Card/perferredTargetTypeCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardeffectcode" class="md-nav__link">
+    Card/effectCode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cardcommand" class="md-nav__link">
+    CardCommand表
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cardcommandremapcode" class="md-nav__link">
+    CardCommand/remapCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardcommandsearchcards" class="md-nav__link">
+    CardCommand/SearchCards指令
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -323,7 +457,7 @@
                 
                 
                 <h1 id="-databasexls">游戏数值表-Database.xls</h1>
-<h2 id="character">Character表头</h2>
+<h2 id="character">Character表</h2>
 <table>
 <thead>
 <tr>
@@ -446,7 +580,7 @@
 <td>dropFilterCode</td>
 <td>string</td>
 <td>掉落物过滤器代码</td>
-<td>注意：用这个可能之前你可能需要先了解一下<a href="#SearchCards">SearchCards指令</a>。它是SearchCards里参数，用于定义掉落物的列表。详细见SearchCards指令，在CardCommand表里</td>
+<td>注意：用这个可能之前你可能需要先了解一下<a href="#CardCommand/SearchCards">SearchCards指令</a>。它是SearchCards里参数，用于定义掉落物的列表。详细见SearchCards指令，在CardCommand表里</td>
 </tr>
 <tr>
 <td>initialRunCardId[0~3]</td>
@@ -463,7 +597,7 @@
 </tbody>
 </table>
 <p><a name="Character/fieldCode"></a></p>
-<h2 id="characterfieldcode">Character/fieldCode</h2>
+<h3 id="characterfieldcode">Character/fieldCode</h3>
 <p>Character有很多字段（表头），如果全部列出来可能会让这个表变得很长难以编辑，所以那些不常用的字段可以写在fieldCode里面，
 不常用的字段有这些:</p>
 <table>
@@ -518,7 +652,7 @@
 </tbody>
 </table>
 <p><a name="Character/tagCode"></a></p>
-<h2 id="charactertagcode">Character/tagCode</h2>
+<h3 id="charactertagcode">Character/tagCode</h3>
 <table>
 <thead>
 <tr>
@@ -577,6 +711,416 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="card">Card表</h2>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>值类型</th>
+<th>名字</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>id</td>
+<td>卡牌的id</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td>string</td>
+<td>名字</td>
+<td>卡牌的名字</td>
+</tr>
+<tr>
+<td>price</td>
+<td>int</td>
+<td>价格</td>
+<td>在原石加工器里的价格</td>
+</tr>
+<tr>
+<td>energyReq</td>
+<td>int</td>
+<td>能量需求</td>
+<td>用卡需要多少能量，俗称卡牌费用</td>
+</tr>
+<tr>
+<td>range</td>
+<td>float</td>
+<td>射程</td>
+<td>卡牌可以作用到多远的地方</td>
+</tr>
+<tr>
+<td>spreadRadius</td>
+<td>float</td>
+<td>扩散半径</td>
+<td>卡牌的AOE范围</td>
+</tr>
+<tr>
+<td>aimTypeCode</td>
+<td>string</td>
+<td>瞄准类型</td>
+<td>设定卡牌可以瞄准哪些单位</td>
+</tr>
+<tr>
+<td>perferredTargetTypeCode</td>
+<td>string</td>
+<td>首选目标类型</td>
+<td>设定首先瞄准哪些单位，<a href="#Card/perferredTargetTypeCode">见下文</a>。</td>
+</tr>
+<tr>
+<td>tagCode</td>
+<td>string</td>
+<td>标签</td>
+<td>设定卡牌类型，比如子弹类、拳类、装备类，<a href="#Card/tagCode">见下文</a>。</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>描述</td>
+<td>留白的话，系统就会根据代码进行自动描述</td>
+</tr>
+<tr>
+<td>code</td>
+<td>string</td>
+<td>代码</td>
+<td>参考CardCommand表</td>
+</tr>
+<tr>
+<td>remapCode</td>
+<td>string</td>
+<td>重映射代码</td>
+<td>如果手动在description里写描述，会有一个问题：数值写死，当改变数值的时候，需要同时改变description和code，这时remapCode就起了作用</td>
+</tr>
+<tr>
+<td>backgroundId</td>
+<td>string</td>
+<td>卡背ID</td>
+<td>对应CardBackground文件夹</td>
+</tr>
+<tr>
+<td>effectCode</td>
+<td>string</td>
+<td>特效</td>
+<td>对应Effect文件夹。你可以直接写ID，也可以写一些其它参数，<a href="#Card/effectCode">见下文</a>。</td>
+</tr>
+</tbody>
+</table>
+<p><a name="Card/tagCode"></a></p>
+<h3 id="cardtagcode">Card/tagCode</h3>
+<p>标签可以自定义，自定义之后你用它来过滤卡牌，比如：给一张卡的标签设定为子弹，另一张卡的作用是使用手上所有子弹类的卡</p>
+<p>你可以设定多个标签，标签用;分号隔开</p>
+<blockquote>
+<p>比如：<code>PosiBuff;CombatOnly</code></p>
+</blockquote>
+<p>不过也有一些系统标签，下面这些是系统标签</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equipment</td>
+<td>装备卡</td>
+</tr>
+<tr>
+<td>Prop</td>
+<td>道具卡</td>
+</tr>
+<tr>
+<td>PosiBuff</td>
+<td>正面Buff</td>
+</tr>
+<tr>
+<td>Debuff</td>
+<td>负面Buff</td>
+</tr>
+<tr>
+<td>CombatOnly</td>
+<td>这张卡只能在战斗中使用</td>
+</tr>
+<tr>
+<td>Hidden</td>
+<td>会在Buff中隐藏</td>
+</tr>
+<tr>
+<td>Interactable</td>
+<td>这张卡被添加为Buff之后，角色就是可交互的</td>
+</tr>
+</tbody>
+</table>
+<p><a name="Card/perferredTargetTypeCode"></a></p>
+<h3 id="cardperferredtargettypecode">Card/perferredTargetTypeCode</h3>
+<p>首选目标类型决定了卡牌首先瞄准哪些单位。</p>
+<p>你可以设定多种类型，当系统没有找到第一种单位的时候，就会寻找第二种，依次类推，类型用分号隔开</p>
+<blockquote>
+<p>比如<code>died;lowHpP;self</code>会依次寻找<code>死亡的单位、血最少的单位、自己</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>emy</td>
+<td>敌人，设定了emy之后就不能瞄准自己人了</td>
+</tr>
+<tr>
+<td>self</td>
+<td>自己，设定了self之后就不能瞄准敌人了</td>
+</tr>
+<tr>
+<td>died</td>
+<td>死掉的单位</td>
+</tr>
+<tr>
+<td>lowHpP</td>
+<td>HP最少的单位</td>
+</tr>
+<tr>
+<td>hasBuff:XXX</td>
+<td>拥有ID为XXX的Buff的单位</td>
+</tr>
+<tr>
+<td>tmt</td>
+<td>队友</td>
+</tr>
+<tr>
+<td>player</td>
+<td>玩家</td>
+</tr>
+<tr>
+<td>tag:XXX</td>
+<td>拥有XXX标签的单位</td>
+</tr>
+</tbody>
+</table>
+<p><a name="Card/effectCode"></a></p>
+<h3 id="cardeffectcode">Card/effectCode</h3>
+<p>你可以直接在effectCode里写特效的id，它将对应Effect文件夹里的资源。</p>
+<p>你也可以写一些别的东西，比如播放音效、定义一个</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buff:XXX</td>
+<td>XXX特效将作为Buff特效，特效会播放直到Buff被移除。</td>
+</tr>
+<tr>
+<td>EffectDelay:1.5</td>
+<td>这个特效将延迟1.5秒才生成</td>
+</tr>
+<tr>
+<td>Anim:XXX</td>
+<td>角色播放一个名叫XXX的动画</td>
+</tr>
+<tr>
+<td>DelayableAnim:XXX</td>
+<td>角色播放一个名叫XXX的动画，它可以被其它地方延迟</td>
+</tr>
+<tr>
+<td>FlickerRed:</td>
+<td>角色模型闪红</td>
+</tr>
+<tr>
+<td>Shake:</td>
+<td>角色模型振动</td>
+</tr>
+<tr>
+<td>其它所有CardCommand的指令</td>
+<td>所有CardCommand的指令都可以使用，不过推荐只使用那些不影响游戏性的指令，不然出现BUG的话不好排除</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cardcommand">CardCommand表</h2>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>值类型</th>
+<th>名字</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>id</td>
+<td>指令的id</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>描述</td>
+<td>指令的描述</td>
+</tr>
+<tr>
+<td>quoteDescription</td>
+<td>string</td>
+<td>引用描述</td>
+<td>当在description里加入了<code>{qte:XXX}</code>的时候，就会出现一张名叫XXX的小卡，描述显示这里面写的</td>
+</tr>
+<tr>
+<td>effectCode</td>
+<td>string</td>
+<td>特效代码</td>
+<td><a href="#Card/effectCode">参考这里</a></td>
+</tr>
+<tr>
+<td>remapCode</td>
+<td>string</td>
+<td>重映射代码</td>
+<td>当这个指令被执行的时候，会执行remapCode来代替。<a href="#CardCommand/remapCode">参考这里</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="CardCommand/remapCode"></a></p>
+<h3 id="cardcommandremapcode">CardCommand/remapCode</h3>
+<p>当这个指令被执行的时候，会执行remapCode来代替。</p>
+<p><strong>例子</strong></p>
+<p><em>CardCommand表</em></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>description</th>
+<th>remapCode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TakeFireDamage</td>
+<td>受到火焰{0}伤害</td>
+<td>TakeDamage:$0;AddBuff:17,1;</td>
+</tr>
+</tbody>
+</table>
+<p><em>Card表</em></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>displayName</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>火焰子弹</td>
+<td>tgt.TakeFireDamage:2</td>
+</tr>
+</tbody>
+</table>
+<p><a name="CardCommand/SearchCards"></a></p>
+<h3 id="cardcommandsearchcards">CardCommand/SearchCards指令</h3>
+<p>卡牌过滤器</p>
+<p>例子：</p>
+<blockquote>
+<p><code>SearchCards:{list:Hand;list:Deck;tag:Bullet}</code>的意思是<code>取得手牌和牌库里标签是Bullet的卡牌</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><autogen:Character.SearchCards></td>
+<td></td>
+</tr>
+<tr>
+<td>list:Db</td>
+<td>取得全部数据库</td>
+</tr>
+<tr>
+<td>list:Prop</td>
+<td>取得道具</td>
+</tr>
+<tr>
+<td>list:Hand</td>
+<td>取得手牌</td>
+</tr>
+<tr>
+<td>list:Deck</td>
+<td>取得牌库</td>
+</tr>
+<tr>
+<td>list:Discarded</td>
+<td>取得弃牌堆</td>
+</tr>
+<tr>
+<td>list:Buff</td>
+<td>取得Buff</td>
+</tr>
+<tr>
+<td>list:pool,XXX</td>
+<td>取得XXX卡池，卡池在Cardset里的tagCode定义</td>
+</tr>
+<tr>
+<td>distinct:</td>
+<td>过滤重复的项</td>
+</tr>
+<tr>
+<td>id:XXX</td>
+<td>只留下id为XXX的项</td>
+</tr>
+<tr>
+<td>anyid:XXX,YYY,ZZZ,...</td>
+<td>只留下id为XXX或者YYY或者ZZZ的项</td>
+</tr>
+<tr>
+<td>notid:XXX</td>
+<td>只留下id不为XXX的项</td>
+</tr>
+<tr>
+<td>tag:XXX</td>
+<td>只留下标签包含XXX的项</td>
+</tr>
+<tr>
+<td>anyTag:XXX,YYY,ZZZ,...</td>
+<td>只留下标签包含XXX或者YYY或者ZZZ的项</td>
+</tr>
+<tr>
+<td>notTag:XXX</td>
+<td>只留下标签不包含XXX的项</td>
+</tr>
+<tr>
+<td>random:</td>
+<td>将列表随机化</td>
+</tr>
+<tr>
+<td>take:3</td>
+<td>只取得列表的前3项</td>
+</tr>
+<tr>
+<td>skip:3</td>
+<td>跳过列表的前3项</td>
+</tr>
+<tr>
+<td></autogen></td>
+<td></td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -612,13 +1156,13 @@
           </a>
         
         
-          <a href="../CardCommand/" title="卡牌指令-CardCommand" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Hotkey/" title="快捷键" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                卡牌指令-CardCommand
+                快捷键
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
