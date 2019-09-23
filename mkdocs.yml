@@ -1,0 +1,21 @@
+site_name: AliveGameStudio
+
+theme:
+    name: material
+    language: 'zh'
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+    feature:
+      tabs: true
+
+extra:
+  search:
+    language: 'zh'
+
+# pages:
+#   - AliveGameStudio: AliveGameStudio/index.md
+#   - 原石计划: TetraProject/index.md
+# extra:
+  disqus: 'alivegamestudio'
