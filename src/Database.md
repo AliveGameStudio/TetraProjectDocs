@@ -3,7 +3,7 @@
 
 
 ## Character表头
-表头|值类型|<div style="width:100px">名字</div>|作用
+表头|值类型|名字|作用
 ---|---|---|---
 id|string|id|id
 displayName|string|名字|名字
