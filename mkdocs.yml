@@ -16,6 +16,7 @@ pages:
   - 快速开始: QuickStart.md
   - 数值表-Database.xls: Database.md
   - 卡牌指令-CardCommand: CardCommand.md
+  - 更多文档正在添加中...: More.md
 
 extra:
   search:
