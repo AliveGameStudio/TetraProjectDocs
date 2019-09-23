@@ -1,4 +1,6 @@
 site_name: AliveGameStudio
+site_dir: 'docs'
+docs_dir: 'src'
 
 theme:
     name: material
