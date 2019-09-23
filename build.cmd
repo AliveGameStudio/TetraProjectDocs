@@ -1,4 +1,4 @@
 mkdocs build
-git commit -a
-git push "origin" master:master
+git commit -am "build"
+git push
 pause
