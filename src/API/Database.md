@@ -68,4 +68,4 @@ introPlotId|string|开场剧情ID，对应Plot文件夹
 outroPlotId|string|结局剧情ID，对应Plot文件夹
 forceMakeOtherCharacterPoolsAvailable|bool|强制开启所有角色的卡牌池、关卡池|比如选择测试员时，卡池中会出现所有角色的卡牌、所有角色的关卡。
 illustrationId|string|插图ID，在角色选择界面显示，对应Illustration文件夹
-unlockByGameEndedCharacterId|string|队友ID
+unlockByGameEndedCharacterId|string|这个角色解锁需要先通关另一个角色

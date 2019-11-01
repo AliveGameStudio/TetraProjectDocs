@@ -34,7 +34,7 @@ def main():
 	docsFolder = os.path.abspath(docsFolder)
 	docsFolder = docsFolder.replace('\\','/')
 
-	srcScriptFolder = '../../TetraProject/Assets/Libs~/GameCore/Scripts/'
+	srcScriptFolder = '../../TetraProject/Assets/Libs/GameCore/Scripts/'
 	if os.path.exists(docsFolder): shutil.rmtree(docsFolder)
 
 	#将三斜杠///注释复制到文档

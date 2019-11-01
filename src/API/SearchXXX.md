@@ -10,6 +10,7 @@ list:ins|取得场上所有的单位
 list:db|取得数据库里的单位
 list:pool,XXX|取得XXX单位池，单位池在Characterset里的tagCode定义
 emy:|只留下敌人
+neutral:|只留下中立单位
 vis:|只留下可见的
 liv:|只留下活着的
 cls:|只留下最近的
@@ -26,6 +27,8 @@ enemyTeamId:XXX|只留下敌人队伍ID是XXX的单位
 hasBuff:XXX|只留下拥有Buff是XXX的单位
 hasMostBuff:XXX|只留下拥有Buff是XXX的单位，并按buff数量从大到小排序
 hasLeastBuff:XXX|只留下拥有Buff是XXX的单位，并按buff数量从小到大排序
+mostBuff:XXX|按buff数量从大到小排序
+leastBuff:XXX|按buff数量从小到大排序
 除了以上参数，也包括了这些参数[FilterList](/../API/SearchXXX/#FilterList)
 
 <a name="SearchCards"></a>
