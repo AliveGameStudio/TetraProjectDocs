@@ -39,7 +39,7 @@ def main():
 
 	#将三斜杠///注释复制到文档
 	for file in glob.iglob(srcScriptFolder + '/**/*.cs', recursive=True):
-		text = open(file, 'r', encoding='utf-8').read()
+		text = open(file, 'r', encoding='utf-8', errors='ignore').read()
 
 
 		#将多行表格换成有效格式

@@ -11,13 +11,33 @@ spreadRadius|float|扩散半径|卡牌的AOE范围
 price|int|价格|在原石加工器里的价格
 remapCode|string|重映射代码|如果手动在description里写描述，会有一个问题：数值写死，当改变数值的时候，需要同时改变description和code，这时remapCode就起了作用
 tagCode|string|标签|设定卡牌类型，比如子弹类、拳类、装备类，详细见[Card-tagCode](/../API/Database/#Card-tagCode)
+minUnlockGrade|int|最低解锁等级，如果值大于0，它就会被默认锁上，默认锁上的卡牌只有在玩家升级解锁之后，才会出现在卡池中
+story|string|故事|可以为这张卡牌写一段小故事
 aimTypeCode|string|瞄准类型|设定卡牌只能瞄准哪些单位
-perferredTargetTypeCode|string|首选目标        ///|设定卡牌首先瞄准哪些单位，一般用于AI<br>1.用竖线 \| 隔开**多个条件**<br>`比如给AI做一张给队友加血的卡："lowHpP|tmt" 会得到 [最小HP的队友]`<br>2.用分号 ; 隔开**多个目标**，AI会按顺序查找，直到找到有效目标<br>`比如给AI做一张给队友加血的卡，如果没有队友就给自己加，"lowHpP|tmt;self" 会得到 [最小HP的队友, 自己]`<br>3.当没有目标时，AI将不行动<br>更多指令见[SearchCharacters](/../API/SearchXXX/#SearchCharacters)。
+perferredTargetTypeCode|string|首选目标|设定卡牌AI的首选目标，详细见[Card-perferredTargetTypeCode](/../API/Database/#Card-perferredTargetTypeCode)
 code|string|代码|参考CardCommand表
 在使用卡片时执行的指令
 effectCode|string|特效|对应Effect文件夹。你可以直接写ID，也可以写一些其它参数，见[effectCode](/../API/effectCode/#effectCode)
 description|string|描述|留白的话，系统就会根据代码进行自动描述
 backgroundId|string|卡背ID|对应CardBackground文件夹
+
+<a name="Card-perferredTargetTypeCode"></a>
+###Card-perferredTargetTypeCode: 首选目标
+ **首选目标**
+
+设定卡牌首先瞄准哪些单位，一般用于AI
+
++ 用竖线 \| 隔开多个**条件**
+> 比如给AI做一张给队友加血的卡："lowHpP|tmt" 会得到 [最小HP的队友]
++ 用分号 ; 隔开多个**目标**，AI会按顺序查找，直到找到有效目标
+> 比如给AI做一张给队友加血的卡，如果没有队友就给自己加，"lowHpP|tmt;self" 会得到 [最小HP的队友, 自己]
++ 如果条件有参数，则不用竖线，而用括号{}加分号;隔开单个目标的多个条件
+> 比如"{hasBuff:17;liv};died;" 会得到 [有着火的并活着的单位, 死亡的单位]
++ 如果条件有参数，而且只有一个目标，则需要加一对**空括号{}**来占位
+> 比如"{hasBuff:17;liv};{}" 会得到 [有着火的并活着的单位]  
+ 如果不加{}的话，比如写成这样："{hasBuff:17;liv};" 会被机器理解成这样 "hasBuff:17;liv"，然后得到错误的结果[有着火的单位, 活着的单位]
++ 当没有目标时，AI将不行动  
+更多指令见[SearchCharacters](/../API/SearchXXX/#SearchCharacters)。
 
 <a name="Card-tagCode"></a>
 ###Card-tagCode: 标签
@@ -47,6 +67,7 @@ description|string|描述|1.会在角色选择界面显示 2.会在被卡牌引�
 hp|float|hp|角色初始生命值
 energy|float|能量|角色初始能量
 stamina|float|体力|角色初始体力
+story|string|故事|可以为这个单位写一段小故事
 maxHandCardCount|int|手牌数上限|超过上限后无法抽卡
 startTurnDrawHandCardCount|int|开始回合抽卡数|每回合开始时，抽几张卡
 initialHandCardCount|int|初始手牌数量|这个字段所以一般给怪物使用。因为怪物是先攻击再抽卡，如果初始手牌数写0，那第一次到怪物的回合的时候，因为没有手牌，怪物会什么都不做渡过这一回合。
@@ -69,3 +90,4 @@ outroPlotId|string|结局剧情ID，对应Plot文件夹
 forceMakeOtherCharacterPoolsAvailable|bool|强制开启所有角色的卡牌池、关卡池|比如选择测试员时，卡池中会出现所有角色的卡牌、所有角色的关卡。
 illustrationId|string|插图ID，在角色选择界面显示，对应Illustration文件夹
 unlockByGameEndedCharacterId|string|这个角色解锁需要先通关另一个角色
+minUnlockGrade|int|最低解锁等级，如果值大于0，它就会被默认锁上，默认锁上的单位只有在玩家升级解锁之后，才会出现在卡池中

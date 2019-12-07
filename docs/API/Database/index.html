@@ -282,6 +282,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#card-perferredtargettypecode" class="md-nav__link">
+    Card-perferredTargetTypeCode: 首选目标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#card-tagcode" class="md-nav__link">
     Card-tagCode: 标签
   </a>
@@ -396,6 +403,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Beginner
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Beginner
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Manual/Beginner/Beginner/" title="Beginner" class="md-nav__link">
+      Beginner
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -426,6 +469,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#card-perferredtargettypecode" class="md-nav__link">
+    Card-perferredTargetTypeCode: 首选目标
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#card-tagcode" class="md-nav__link">
@@ -539,6 +589,18 @@
 <td>设定卡牌类型，比如子弹类、拳类、装备类，详细见<a href="/../API/Database/#Card-tagCode">Card-tagCode</a></td>
 </tr>
 <tr>
+<td>minUnlockGrade</td>
+<td>int</td>
+<td>最低解锁等级，如果值大于0，它就会被默认锁上，默认锁上的卡牌只有在玩家升级解锁之后，才会出现在卡池中</td>
+<td></td>
+</tr>
+<tr>
+<td>story</td>
+<td>string</td>
+<td>故事</td>
+<td>可以为这张卡牌写一段小故事</td>
+</tr>
+<tr>
 <td>aimTypeCode</td>
 <td>string</td>
 <td>瞄准类型</td>
@@ -547,8 +609,8 @@
 <tr>
 <td>perferredTargetTypeCode</td>
 <td>string</td>
-<td>首选目标        ///</td>
-<td>设定卡牌首先瞄准哪些单位，一般用于AI<br>1.用竖线 | 隔开<strong>多个条件</strong><br><code>比如给AI做一张给队友加血的卡："lowHpP|tmt" 会得到 [最小HP的队友]</code><br>2.用分号 ; 隔开<strong>多个目标</strong>，AI会按顺序查找，直到找到有效目标<br><code>比如给AI做一张给队友加血的卡，如果没有队友就给自己加，"lowHpP|tmt;self" 会得到 [最小HP的队友, 自己]</code><br>3.当没有目标时，AI将不行动<br>更多指令见<a href="/../API/SearchXXX/#SearchCharacters">SearchCharacters</a>。</td>
+<td>首选目标</td>
+<td>设定卡牌AI的首选目标，详细见<a href="/../API/Database/#Card-perferredTargetTypeCode">Card-perferredTargetTypeCode</a></td>
 </tr>
 <tr>
 <td>code</td>
@@ -582,6 +644,31 @@
 </tr>
 </tbody>
 </table>
+<p><a name="Card-perferredTargetTypeCode"></a></p>
+<h3 id="card-perferredtargettypecode">Card-perferredTargetTypeCode: 首选目标</h3>
+<p><strong>首选目标</strong></p>
+<p>设定卡牌首先瞄准哪些单位，一般用于AI</p>
+<ul>
+<li>用竖线 | 隔开多个<strong>条件</strong><blockquote>
+<p>比如给AI做一张给队友加血的卡："lowHpP|tmt" 会得到 [最小HP的队友]</p>
+</blockquote>
+</li>
+<li>用分号 ; 隔开多个<strong>目标</strong>，AI会按顺序查找，直到找到有效目标<blockquote>
+<p>比如给AI做一张给队友加血的卡，如果没有队友就给自己加，"lowHpP|tmt;self" 会得到 [最小HP的队友, 自己]</p>
+</blockquote>
+</li>
+<li>如果条件有参数，则不用竖线，而用括号{}加分号;隔开单个目标的多个条件<blockquote>
+<p>比如"{hasBuff:17;liv};died;" 会得到 [有着火的并活着的单位, 死亡的单位]</p>
+</blockquote>
+</li>
+<li>如果条件有参数，而且只有一个目标，则需要加一对<strong>空括号{}</strong>来占位<blockquote>
+<p>比如"{hasBuff:17;liv};{}" 会得到 [有着火的并活着的单位]<br />
+ 如果不加{}的话，比如写成这样："{hasBuff:17;liv};" 会被机器理解成这样 "hasBuff:17;liv"，然后得到错误的结果[有着火的单位, 活着的单位]</p>
+</blockquote>
+</li>
+<li>当没有目标时，AI将不行动<br />
+更多指令见<a href="/../API/SearchXXX/#SearchCharacters">SearchCharacters</a>。</li>
+</ul>
 <p><a name="Card-tagCode"></a></p>
 <h3 id="card-tagcode">Card-tagCode: 标签</h3>
 <p><strong>标签</strong></p>
@@ -669,6 +756,12 @@
 <td>float</td>
 <td>体力</td>
 <td>角色初始体力</td>
+</tr>
+<tr>
+<td>story</td>
+<td>string</td>
+<td>故事</td>
+<td>可以为这个单位写一段小故事</td>
 </tr>
 <tr>
 <td>maxHandCardCount</td>
@@ -778,7 +871,12 @@
 <tr>
 <td>unlockByGameEndedCharacterId</td>
 <td>string</td>
-<td>队友ID</td>
+<td>这个角色解锁需要先通关另一个角色</td>
+</tr>
+<tr>
+<td>minUnlockGrade</td>
+<td>int</td>
+<td>最低解锁等级，如果值大于0，它就会被默认锁上，默认锁上的单位只有在玩家升级解锁之后，才会出现在卡池中</td>
 </tr>
 </tbody>
 </table>
