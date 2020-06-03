@@ -2,22 +2,6 @@
 
 > 使用快捷键需要先[进入Steam的开发分支](../QuickStart/#EnterDevBranch)
 
-## 在Database.xls里的快捷键
-> 在某个表按下下列快捷键再切到游戏里
-
-快捷键|功能
----|---
-在Card表按Alt+4|印卡
-在Character表里按Alt+4|刷怪
-在Stage表里按Alt+4|跳关
-在Tester表里按Alt+4|设置当前测试用的流派
-在Stage表里按Alt+1|打开对应Stage的地图文件。比如StageMap/1.tmx
-Alt+2|在某个头表是`xxxxPlotId`的单元格按Alt+2，可以快速打开这个剧情脚本。（比如Character表的interactionPlotId）
-Alt+5|在引用的单元格按Alt+5可以快速跳转到引用的项（引用的单元格指的是那些会自动从数字ID变成中文的单元格，比如Cardset的cardId0）
-		
-
-
-
 ## 在游戏里的快捷键
 
 快捷键|功能

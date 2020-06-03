@@ -358,13 +358,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    必要工具
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#steam" class="md-nav__link">
     进入Steam的开发分支
   </a>
@@ -384,21 +377,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     模板资源包
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     快速入门
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     下一节：学习快捷键
   </a>
   
@@ -485,13 +478,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    必要工具
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#steam" class="md-nav__link">
     进入Steam的开发分支
   </a>
@@ -511,21 +497,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     模板资源包
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     快速入门
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     下一节：学习快捷键
   </a>
   
@@ -552,15 +538,6 @@
 <hr />
 <p><a name="Tools"></a></p>
 <h2 id="_1">前期准备</h2>
-<h3 id="_2">必要工具</h3>
-<ol>
-<li>WPS</li>
-<li>WPS的VBA组件</li>
-</ol>
-<blockquote>
-<p><strong>提示</strong>：WPS可以去WPS的官网下载，VBA组件在网上不容易找到，可以加QQ群下载：652279837</p>
-<p>或者使用Excel，这样就不需要再下载VBA</p>
-</blockquote>
 <p><a name="EnterDevBranch"></a></p>
 <h3 id="steam">进入Steam的开发分支</h3>
 <p>steam客户端列表中，右键游戏-属性-测试-输入TetraProjectDevelopAlpha-选择developalpha</p>
@@ -574,13 +551,13 @@
 <pre><code>我的文档/
     TetraProject/
         Packages/
-            阿蔡MOD/
+            杰哥的MOD/
                 Database/
-                    Database.xls
+                    Database.xlsx
                 CharacterModel/
                     1.ase
                 Music/
-                    1.mp3       
+                    1.ogg       
             阿伟的卡绘/
                 CharacterModel/
                     1.ase
@@ -589,30 +566,25 @@
 </code></pre>
 
 <p><a name="TemplatePackage"></a></p>
-<h2 id="_3">模板资源包</h2>
+<h2 id="_2">模板资源包</h2>
 <p>如果你不知道如何新建MOD资源包，游戏提供了一个内置资源包名叫<code>Builtin</code>可以作为模版</p>
-<p>你可以在游戏安装目录的<code>TetraProject_Data\StreamingAssets\Packages\Builtin</code>下面找到它（如果没有找到这个资源包，需要先<a href="#EnterDevBranch">进入Steam的开发分支</a>）。</p>
+<p>你可以在<code>&lt;游戏安装目录&gt;\TetraProject_Data\StreamingAssets\Packages\Builtin</code>下面找到它（如果没有找到这个资源包，需要先<a href="#EnterDevBranch">进入Steam的开发分支</a>）。</p>
 <p>每个MOD资源包都使用了和「Builtin」相同的目录结构，你可以把内置资源包当成一个大型MOD来参考。</p>
 <hr />
 <blockquote>
 <p>使用快捷键需要先<a href="../QuickStart/#EnterDevBranch">进入Steam的开发分支</a></p>
 </blockquote>
-<h2 id="_4">快速入门</h2>
+<h2 id="_3">快速入门</h2>
 <ol>
-<li><strong>下载并安装</strong><a href="#Tools">必要工具</a></li>
 <li><strong>复制模版资源包</strong>：将<a href="#TemplatePackage">模版资源包</a>复制到<a href="#UserModFolder">MOD资源包位置</a>（也就是readme.txt所在目录）</li>
 <li><strong>资源包改名</strong>：删掉复制过来的Builtin/PackageInfo.json，然后把资源包文件夹改一个你想要的名字，比如「阿伟MOD」。</li>
-<li><strong>打开游戏数据库</strong>：用WPS打开资源包里的Database/Database.xls，这里面集合了所有游戏数据。</li>
-<li><strong>查看并学习</strong>：打开Card表，你可以看到现有的所有卡牌，按ALT+4再切到游戏里，你会印出那张卡<blockquote>
-<p>如果你使用Alt+4切到游戏里没有印出这张卡，检查一下是否安装WPS的VBA组件，或者检查WPS是否开启了宏</p>
-</blockquote>
-</li>
+<li><strong>打开游戏数据库</strong>：用<code>&lt;游戏安装目录&gt;/DbEditor/AgsDbEditor.exe</code>打开资源包里的Database/Database.xlsx，这里面集合了所有游戏数据。</li>
+<li><strong>查看并学习</strong>：打开Card表，你可以看到现有的所有卡牌，按ALT+4再切到游戏里，你会印出那张卡</li>
 <li><strong>开始制作一张卡</strong>：随便复制一张现有的卡牌，然后改个ID，改一下功能，就做出了一张新的卡。</li>
-<li><strong>删掉多余的数据</strong>：当你做完你的MOD，记得删掉Builtin的内容和表格，只保留你做过的内容</li>
 <li><strong>上传MOD到创意工坊</strong>：进入游戏-暂停菜单-创意工坊-自制文件夹-选择你的MOD-输入MOD的简介-点上传</li>
 </ol>
 <hr />
-<h2 id="_5">下一节：<a href="../Hotkey">学习快捷键</a></h2>
+<h2 id="_4">下一节：<a href="../Hotkey">学习快捷键</a></h2>
                 
                   
                 
