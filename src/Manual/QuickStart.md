@@ -8,7 +8,7 @@
 <a name="EnterDevBranch"></a>
 ### 进入Steam的开发分支
 
-steam客户端列表中，右键游戏-属性-测试-输入TetraProjectDevelopAlpha-选择developalpha
+steam客户端列表中，右键游戏-属性-测试-输入TetraProjectDevelopAlpha-选择developalpha（需要先关闭游戏才能选）
 
 ---------
 
