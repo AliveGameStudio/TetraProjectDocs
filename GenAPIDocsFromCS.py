@@ -34,13 +34,12 @@ def main():
 	docsFolder = os.path.abspath(docsFolder)
 	docsFolder = docsFolder.replace('\\','/')
 
-	srcScriptFolder = '../../TetraProject/Assets/Libs/GameCore/Scripts/'
+	srcScriptFolder = '../Assets/Libs~/GameCore/Scripts/'
 	if os.path.exists(docsFolder): shutil.rmtree(docsFolder)
 
 	#将三斜杠///注释复制到文档
 	for file in glob.iglob(srcScriptFolder + '/**/*.cs', recursive=True):
 		text = open(file, 'r', encoding='utf-8', errors='ignore').read()
-
 
 		#将多行表格换成有效格式
 		#比如这样：
