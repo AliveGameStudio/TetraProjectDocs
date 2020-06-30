@@ -51,7 +51,7 @@ steam客户端列表中，右键游戏-属性-测试-输入TetraProjectDevelopAl
 ## 快速入门
 1. **复制模版资源包**：将[模版资源包](#TemplatePackage)复制到[MOD资源包位置](#UserModFolder)（也就是readme.txt所在目录）
 1. **资源包改名**：删掉复制过来的Builtin/PackageInfo.json，然后把资源包文件夹改一个你想要的名字，比如「阿伟MOD」。
-1. **打开游戏数据库**：用`<游戏安装目录>/DbEditor/AgsDbEditor.exe`打开资源包里的Database/Database.xlsx，这里面集合了所有游戏数据。
+1. **打开游戏数据库**：用`<游戏安装目录>/DbEditor/AgsDbEditor.exe`打开资源包里的Database/Database.xlsx，这里面集合了所有游戏数据。（很早以前用的是WPS+VBA来编辑的数据，现在添加了数据编辑器DbEditor，就不再需要WPS和VBA了）
 1. **查看并学习**：打开Card表，你可以看到现有的所有卡牌，按ALT+4再切到游戏里，你会印出那张卡
 1. **开始制作一张卡**：随便复制一张现有的卡牌，然后改个ID，改一下功能，就做出了一张新的卡。
 1. **上传MOD到创意工坊**：进入游戏-暂停菜单-创意工坊-自制文件夹-选择你的MOD-输入MOD的简介-点上传
